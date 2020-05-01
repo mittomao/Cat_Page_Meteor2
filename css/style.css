@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+body a {
+  text-decoration: none;
+}
+body h1.title {
+  font-size: 36px;
+  font-family: "Yeseva One", cursive;
+}
+body h1.text_white {
+  color: #ffffff;
+}
+body h1.text_orange {
+  color: #cc9900;
+}
+body p.text {
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  position: relative;
+  max-width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: url(./../img/sanpham/Bg.jpg);
+  background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+.header a.nav-item {
+  position: relative;
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 500;
+  font-style: bold;
+  text-shadow: 0 0 5px #fff;
+  font-family: "Gentium Book Basic", serif;
+}
+.header a.nav-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, transparent, red);
+  opacity: 0;
+  transition: 0.3s;
+}
+.header a.nav-item:focus {
+  border-top: 2px solid #fff;
+  padding-top: 20px;
+  transition: 0.4s;
+  color: lime;
+}
+.header a.nav-item:focus:before {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.header i.fa {
+  color: #cc9900;
+  padding-left: 10px;
+  font-size: 1.5em;
+}
+.header__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header__content h1 {
+  color: #ffffff;
+  font-size: 5em;
+  text-align: unset;
+  word-wrap: break-word;
+  font-family: "Yeseva One", cursive;
+}
+.header__content img {
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.header__content div a {
+  position: relative;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 10px;
+  text-shadow: 0 0 5px #fff;
+}
+.header__content div a:nth-child(1):before, .header__content div a:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.header__content div a:nth-child(1):before {
+  background: #262828;
+  border: 1px solid #fff;
+  opacity: 0.8;
+}
+.header__content div a:nth-child(2):before {
+  background: #cebb76;
+  border: 1px solid #fff;
+  opacity: 0.8;
+}
+
+.layer1 {
+  width: 100%;
+  background: url(./../img/sanpham/bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  padding: 70px 0;
+}
+.layer1__left {
+  padding-top: 100px;
+}
+.layer1__left .title {
+  font-size: 36px;
+  color: #cc9900;
+}
+.layer1__left img.logo {
+  margin: 20px 0;
+}
+.layer1__right {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.layer1__right img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.layer2 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(./../img/sanpham/bg2.jpg);
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.layer2__box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 33.33%;
+  height: 100%;
+  text-align: center;
+  transform: scaleY(0.8);
+}
+.layer2__box > div {
+  padding: 100px 0;
+}
+.layer2__box > div img.icon {
+  padding: 20px;
+}
+.layer2__box > div p.text {
+  font-size: 16px;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: left;
+}
+.layer2__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #191411;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.layer3 {
+  padding: 75px 0;
+  width: 100%;
+  background: url(./../img/sanpham/bg6.jpg);
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.layer3--padding {
+  padding: 40px;
+}
+.layer3--padding img.icon {
+  padding: 10px 0;
+}
+.layer3--padding > div {
+  margin-bottom: 20px;
+}
+.layer3--padding h3.title_name, .layer3--padding h3.title_price {
+  font-size: 21px;
+  font-family: "Yeseva One", cursive;
+  color: #cc9900;
+}
+.layer3--padding img.product {
+  width: 30px;
+}
+.layer3--padding p.text {
+  font-size: 16px;
+  text-align: left;
+}
+.layer3--padding .special {
+  border: 1px solid #cc9900;
+  padding: 0 10px;
+  position: relative;
+}
+.layer3--padding .special:before {
+  content: "Special";
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 60px;
+  height: 20px;
+  background: #cc9900;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.layer4 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(./../img/sanpham/bg7.jpg) no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.layer4__box {
+  padding: 100px 0;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  transform: scaleY(0.8);
+}
+.layer4__box > div {
+  padding: 0 50px;
+}
+.layer4__box > div img.icon {
+  padding: 20px;
+}
+.layer4__box > div p.text_big {
+  font-size: 25px;
+  font-family: "Gentium Book Basic", serif;
+  color: #dde0df;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: left;
+}
+.layer4__box > div p.text_small {
+  font-size: 18px;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-family: "Lato", sans-serif;
+}
+.layer4__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #020202;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.layer5 {
+  padding: 100px;
+  background: url(./../img/sanpham/bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.layer5__left {
+  margin: 0 auto;
+}
+.layer5__left img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.layer5__right {
+  padding: 0 50px;
+}
+.layer5__right img.icon {
+  padding: 15px;
+}
+.layer5__right p.text {
+  font-size: 16px;
+}
+.layer5 .btn__mid {
+  padding: 10px 40px;
+  background: #cc9900;
+  color: #ffffff;
+  font-size: 20px;
+  text-shadow: 0 0 5px #fff;
+}
+.layer5 input {
+  font-style: italic;
+}
+.layer5 label {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #cc9900;
+  font-weight: 500;
+}
+
+footer {
+  background: #191919;
+  padding: 60px 0;
+}
+footer h3.title_name {
+  font-size: 21px;
+  font-family: "Yeseva One", cursive;
+  color: #ffffff;
+}
+footer img.icon {
+  padding: 20px;
+}
+footer p.text {
+  font-size: 16px;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+footer i.fa {
+  color: #ffffff;
+  font-size: 1.5em;
+  padding: 0 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

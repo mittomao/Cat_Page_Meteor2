@@ -1,0 +1,58 @@
+/* Mobile */
+@media (max-width:765px)
+{
+    /* .layer5_left
+    {
+        padding-left:0 ;
+        padding-right:0 ;
+    } */
+    /* .so-gutter
+    {
+        padding-left: 5px;
+        padding-right: 5px;
+    } */
+    .header__content h1
+    {
+        font-size: 3em;
+    }
+    .header__content >div a
+    {
+        display: block;
+    }
+    .layer2__box
+    {
+        width: 100%;
+        height: 100%;
+        left:0;
+    }
+    .layer4__box
+    {
+        width: 100%;
+    }
+    .mobile
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .layer5__right
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Tablet */
+@media (min-width:768px) and (max-width:1023px)
+{
+    .layer2__box
+    {
+        width: 100%;
+        left:0;
+    }
+}
+
+/* PC */
+@media (min-width:1024px)
+{
+    
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: lime;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+    var getDirection = function (ev, obj) {
+            var w = obj.offsetWidth,
+                h = obj.offsetHeight,
+                x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
+                y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
+                d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
+            return d;
+        };
+        const div = document.querySelector("div");
+        div.addEventListener("mouseover",(e)=>{
+            console.log(getDirection(e,div));
+        });
+    </script>
+</body>
+</html>

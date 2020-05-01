@@ -1,0 +1,411 @@
+*{
+margin:0;
+padding:0;
+}
+// Thiet Lap Thuoc Tinh CHung
+$color_white : #ffffff;
+$color_main : #cc9900;
+$font_weight : 500;
+$text-shadow : 0 0 5px #fff;
+$font_title : 36px;
+$font_text : 16px;
+body
+{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    a{
+        text-decoration: none;
+    }
+    h1.title{
+        font-size: $font_title;
+        font-family: 'Yeseva One', cursive;
+    }
+    h1.text_white{
+        color: $color_white;
+    }
+    h1.text_orange{
+        color: $color_main;
+    }
+    p.text{
+        font-family: 'Lato', sans-serif;
+    }
+}
+.header
+{
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: url(./../img/sanpham/Bg.jpg);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    a.nav-item{
+        position: relative;
+        font-size: 21px;
+        color: $color_white;
+        font-weight: $font_weight;
+        font-style: bold;
+        text-shadow: $text-shadow;
+        font-family: 'Gentium Book Basic', serif;
+    }
+    a.nav-item:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(to top , transparent,transparent,red);
+        opacity: 0;
+        transition: 0.3s;
+    }
+    a.nav-item:focus{
+        border-top: 2px solid #fff;
+        padding-top: 20px;
+        transition:0.4s;
+        color: lime;
+    }
+    a.nav-item:focus:before{
+        opacity: 1;
+        transition-delay: 0.3s;
+    }
+    i.fa
+    {
+        color : $color_main;
+        padding-left: 10px;
+        font-size: 1.5em;
+    }
+    &__content
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        margin: auto;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        h1{
+            color: $color_white;
+            font-size: 5em;
+            text-align: unset;
+            word-wrap: break-word;
+            font-family: 'Yeseva One', cursive;
+        }
+        img{
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        div a{
+            position: relative;
+            padding: 10px 20px;
+            color: $color_white;
+            font-weight: $font_weight;
+            margin: 10px;
+            text-shadow: $text-shadow;
+             &:nth-child(1):before , 
+             &:nth-child(2):before
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            &:nth-child(1):before
+            {
+                background: #262828;
+                border: 1px solid #fff;
+                opacity: 0.8;
+            }
+            &:nth-child(2):before
+            {
+                background: #cebb76;
+                border: 1px solid #fff;
+                opacity: 0.8;
+            }
+        }
+
+    }
+}
+
+.layer1
+{
+    width: 100%;
+    background: url(./../img/sanpham/bg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    padding: 70px 0;
+    &__left
+    {
+       padding-top: 100px;
+       .title
+       {
+           font-size: 36px;
+           color: $color_main;
+       }
+       img.logo{
+           margin: 20px 0;
+       }
+    }
+    &__right
+    {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+    &__right img
+    {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+}
+
+// End Layer1
+
+// Layer2
+
+.layer2
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(./../img/sanpham/bg2.jpg);
+    background-size: cover;
+    background-position: 100% 100%;
+    &__box{
+        position: absolute;
+        top: 0;
+        left:50%;
+        // padding: 100px 0;
+        width:33.33%;
+        height: 100%;
+        // background: aqua;
+        text-align: center;
+        transform:scaleY(0.8);
+    }
+    &__box>div
+    {
+        // padding:0 50px;
+        padding: 100px 0;
+        img.icon{
+            padding: 20px;
+        }
+        p.text
+        {
+            font-size:16px;
+            color: $color_white;
+           padding-top: 10px;;
+           padding-bottom: 30px;;
+           text-align: left;
+        }
+    }
+    &__box::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #191411;
+        z-index: -1;
+        opacity: 0.8;
+    }
+}
+//Layer3
+.layer3
+{
+    padding: 75px 0;
+    width: 100%;;
+    background: url(./../img/sanpham/bg6.jpg);
+    background-size: cover;
+    background-position: 100% 100%;
+    &--padding
+    {
+        padding: 40px;
+        img.icon
+        {
+            padding: 10px 0;
+        }
+        > div{
+            margin-bottom: 20px;
+        }
+        
+        h3.title_name , h3.title_price{
+            font-size:21px;
+            font-family: 'Yeseva One', cursive;
+            color: $color_main;
+        }
+        img.product{
+            width: 30px;
+        }
+        p.text{
+            font-size:$font_text;
+            text-align: left;
+        }
+        .special
+        {
+            border: 1px solid #cc9900;
+            padding:0 10px;
+            position: relative;
+        }
+        .special:before
+        {
+            content: 'Special';
+            position:absolute;
+            top: -20px;
+            right: 0;
+            width:60px;
+            height: 20px;
+            background: #cc9900;
+            text-align: center;
+            font-size: 12px;
+            color: $color_white;
+        }
+
+    }
+
+}
+
+// Layer4
+
+.layer4
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    // height: auto;
+    background: url(./../img/sanpham/bg7.jpg) no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    &__box{
+        padding: 100px 0;
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        // background: aqua;
+        text-align: center;
+        transform:scaleY(0.8);
+    }
+    &__box>div
+    {
+        padding:0 50px;
+       
+        img.icon{
+            padding: 20px;
+        }
+        p.text_big
+        {
+            font-size:25px;
+            font-family: 'Gentium Book Basic', serif;
+            color: #dde0df;
+            padding-top: 10px;;
+            padding-bottom: 30px;;
+            text-align: left;
+        }
+        p.text_small
+        {
+            font-size:18px;
+            color: $color_white;
+            padding-top: 10px;;
+            padding-bottom: 30px;
+            font-family: 'Lato', sans-serif;
+        }
+    }
+    &__box::before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #020202;
+        z-index: -1;
+        opacity: 0.8;
+    }
+}
+
+// Layer5
+
+.layer5
+{
+    padding: 100px;
+    background: url(./../img/sanpham/bg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    &__left{
+        margin: 0 auto;
+        img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 100% 100%;
+        }
+    }
+    &__right{
+        padding: 0 50px;
+        img.icon{
+            padding: 15px;
+        }
+        p.text
+        {
+            font-size:16px;
+        }
+    }
+    .btn__mid
+    {
+        padding: 10px 40px;
+        background: $color_main;
+        color: $color_white;
+        font-size: 20px;
+        text-shadow: $text-shadow;
+    }
+    input{
+        font-style: italic;
+    }
+    label{
+        font-size:14px;
+        font-family: 'Open Sans', sans-serif;
+        color: $color_main;
+        font-weight: $font_weight;      
+    }
+}
+
+
+// footer
+
+footer
+{
+    background: #191919;
+    padding: 60px 0;
+    h3.title_name{
+        font-size:21px;
+        font-family: 'Yeseva One', cursive;
+        color: $color_white;
+    }
+    img.icon{
+        padding: 20px;
+    }
+    p.text
+    {
+        font-size:16px;
+        color: $color_white;
+       padding-top: 10px;;
+       padding-bottom: 30px;;
+       font-family: 'Open Sans', sans-serif;
+
+    }
+    i.fa{
+        color: $color_white;
+        font-size: 1.5em;
+        padding: 0 5px;
+    }
+}
+
+
+
